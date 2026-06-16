@@ -32,7 +32,7 @@ body{
   font-family:var(--font-body);
   overflow-x:hidden;
 }
- 
+
 /* LOGIN */
 .login-overlay{
   position:fixed;inset:0;
@@ -100,11 +100,11 @@ body{
   font-family:var(--font-mono);
   margin-top:16px;text-align:center;
 }
- 
+
 /* LAYOUT */
 .app{display:flex;height:100vh;opacity:0;transition:opacity 0.5s;}
 .app.active{opacity:1;}
- 
+
 /* SIDEBAR */
 .sidebar{
   width:var(--sidebar);
@@ -114,7 +114,7 @@ body{
   border-right:1px solid var(--border);
   height:100vh;
 }
- 
+
 @media (max-width: 768px) {
   .sidebar {
     position: fixed;
@@ -140,7 +140,7 @@ body{
   .table-card{overflow-x:auto;}
   table{min-width:600px;}
 }
- 
+
 .overlay {
   display: none;
   position: fixed;
@@ -148,11 +148,11 @@ body{
   background: rgba(0,0,0,0.5);
   z-index: 999;
 }
- 
+
 .overlay.active {
   display: block;
 }
- 
+
 .sidebar-header{
   padding:20px 20px 16px;
   border-bottom:1px solid var(--border);
@@ -169,7 +169,7 @@ body{
   letter-spacing:1px;margin-top:4px;
   text-transform:uppercase;
 }
- 
+
 .sidebar-nav{flex:1;overflow-y:auto;padding:16px 0;}
 .nav-section-label{
   font-family:var(--font-mono);
@@ -202,7 +202,7 @@ body{
   padding:2px 6px;border-radius:10px;
 }
 .nav-badge.green{background:var(--accent3);color:#000;}
- 
+
 .sidebar-user{
   padding:16px 20px;
   border-top:1px solid var(--border);
@@ -223,7 +223,7 @@ body{
   transition:color 0.2s;
 }
 .logout-btn:hover{color:var(--danger);}
- 
+
 /* MAIN */
 .main{
   flex:1;overflow-y:auto;
@@ -266,24 +266,26 @@ body{
 .topbar-time{
   font-family:var(--font-mono);font-size:12px;color:var(--muted);
 }
- 
+
 @media (max-width: 600px){
   .sys-status{display:none;}
   .topbar{padding:14px 16px;}
 }
- 
+
 /* PAGES */
 .page{display:none;padding:28px;flex:1;}
 .page.active{display:block;}
- 
+
 /* KPI GRID */
 .kpi-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(180px, 1fr));
-  gap:16px;
+  grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+  gap:20px;
+  max-width:1100px;
 }
 .kpi-grid-3,.kpi-grid-4{
-  grid-template-columns:repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));
+  max-width:1100px;
 }
 @media (max-width: 480px){
   .kpi-grid,.kpi-grid-3,.kpi-grid-4{
@@ -328,7 +330,13 @@ body{
   color:var(--accent3);
 }
 .kpi-change.down{color:var(--danger);}
- 
+
+@media (min-width: 1024px){
+  .kpi-icon{font-size:28px;}
+  .kpi-value{font-size:32px;}
+  .kpi-card{padding:24px;}
+}
+
 /* CHARTS ROW */
 .charts-row{
   display:grid;grid-template-columns:2fr 1fr;
@@ -358,7 +366,7 @@ body{
   font-size:10px;color:var(--muted);font-family:var(--font-mono);
 }
 .legend-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;}
- 
+
 /* TABLES */
 .table-card{
   background:var(--surface);
@@ -397,7 +405,7 @@ td{
 }
 tr:last-child td{border-bottom:none;}
 tr:hover td{background:rgba(0,210,255,0.03);}
- 
+
 .status-badge{
   display:inline-flex;align-items:center;gap:5px;
   padding:3px 10px;border-radius:20px;
@@ -409,7 +417,7 @@ tr:hover td{background:rgba(0,210,255,0.03);}
 .status-badge.pending{background:rgba(255,184,0,0.1);color:var(--warning);border:1px solid rgba(255,184,0,0.2);}
 .status-badge.critical{background:rgba(255,59,92,0.1);color:var(--danger);border:1px solid rgba(255,59,92,0.2);}
 .status-badge.resolved{background:rgba(0,210,255,0.1);color:var(--accent);border:1px solid rgba(0,210,255,0.2);}
- 
+
 .action-btn{
   background:transparent;border:1px solid var(--border);
   color:var(--muted);padding:4px 12px;
@@ -419,7 +427,7 @@ tr:hover td{background:rgba(0,210,255,0.03);}
   white-space:nowrap;
 }
 .action-btn:hover{border-color:var(--accent);color:var(--accent);}
- 
+
 /* MESSAGES */
 .message-list{display:flex;flex-direction:column;gap:12px;}
 .message-item{
@@ -455,10 +463,10 @@ tr:hover td{background:rgba(0,210,255,0.03);}
   padding:2px 6px;border-radius:10px;
   margin-left:8px;
 }
- 
+
 /* CANVAS */
 canvas{display:block;max-width:100%;}
- 
+
 /* MODAL */
 .modal-overlay{
   position:fixed;inset:0;
@@ -512,7 +520,7 @@ canvas{display:block;max-width:100%;}
   cursor:pointer;transition:all 0.2s;
 }
 .btn-modal-cancel:hover{border-color:var(--danger);color:var(--danger);}
- 
+
 /* SPARKLINE */
 .sparkline-bar{
   display:flex;align-items:flex-end;
@@ -526,7 +534,7 @@ canvas{display:block;max-width:100%;}
 }
 .sbar:hover{opacity:1;}
 .sbar.danger{background:var(--danger);}
- 
+
 /* SCROLLBAR */
 ::-webkit-scrollbar{width:4px;}
 ::-webkit-scrollbar-track{background:transparent;}
@@ -535,13 +543,13 @@ canvas{display:block;max-width:100%;}
 </style>
 </head>
 <body>
- 
+
 <!-- LOGIN SCREEN -->
 <div class="login-overlay" id="login-overlay">
   <div class="login-box">
     <div class="login-logo">TRACEABLE <span>IT</span> LTD</div>
     <p class="login-sub">// Admin Portal</p>
- 
+
     <div class="login-field">
       <label>Username</label>
       <input type="text" id="login-user" placeholder="admin" autocomplete="username"/>
@@ -556,20 +564,20 @@ canvas{display:block;max-width:100%;}
     <p class="login-hint">Demo: admin / traceable2026</p>
   </div>
 </div>
- 
+
 <!-- MAIN APP -->
 <div class="app" id="app">
- 
+
   <!-- SIDEBAR OVERLAY (mobile) -->
   <div class="overlay" id="sidebar-overlay" onclick="closeSidebar()"></div>
- 
+
   <!-- SIDEBAR -->
   <aside class="sidebar" id="sidebar">
     <div class="sidebar-header">
       <div class="sidebar-logo">TRACEABLE <span>IT</span></div>
       <div class="sidebar-tag">// Admin Portal</div>
     </div>
- 
+
     <nav class="sidebar-nav">
       <p class="nav-section-label">Overview</p>
       <div class="nav-item active" onclick="showPage('dashboard',this)">
@@ -579,7 +587,7 @@ canvas{display:block;max-width:100%;}
         <span class="nav-icon">🛡️</span> Threats
         <span class="nav-badge" id="threat-badge">3</span>
       </div>
- 
+
       <p class="nav-section-label">Business</p>
       <div class="nav-item" id="nav-messages" onclick="showPage('messages',this)">
         <span class="nav-icon">📨</span> Inquiries
@@ -592,7 +600,7 @@ canvas{display:block;max-width:100%;}
         <span class="nav-icon">🎫</span> Tickets
         <span class="nav-badge" id="ticket-badge">7</span>
       </div>
- 
+
       <p class="nav-section-label">System</p>
       <div class="nav-item" onclick="showPage('assets',this)">
         <span class="nav-icon">🖥️</span> Assets
@@ -604,7 +612,7 @@ canvas{display:block;max-width:100%;}
         <span class="nav-icon">🌐</span> View Website
       </div>
     </nav>
- 
+
     <div class="sidebar-user">
       <div class="user-avatar">AD</div>
       <div class="user-info">
@@ -614,7 +622,7 @@ canvas{display:block;max-width:100%;}
       <button class="logout-btn" onclick="doLogout()" title="Logout">⏻</button>
     </div>
   </aside>
- 
+
   <!-- MAIN CONTENT -->
   <main class="main">
     <div class="topbar">
@@ -625,7 +633,7 @@ canvas{display:block;max-width:100%;}
         <span class="topbar-time" id="clock">--:--:--</span>
       </div>
     </div>
- 
+
     <!-- DASHBOARD -->
     <div class="page active" id="page-dashboard">
       <div class="kpi-grid">
@@ -654,7 +662,7 @@ canvas{display:block;max-width:100%;}
           <span class="kpi-change">↑ SLA: 99.9% target</span>
         </div>
       </div>
- 
+
       <div class="charts-row">
         <div class="chart-card">
           <div class="chart-header">
@@ -673,7 +681,7 @@ canvas{display:block;max-width:100%;}
           <canvas id="chart-donut" height="180"></canvas>
         </div>
       </div>
- 
+
       <!-- Recent Inquiries -->
       <div class="table-card">
         <div class="table-header">
@@ -715,7 +723,7 @@ canvas{display:block;max-width:100%;}
         </div>
       </div>
     </div>
- 
+
     <!-- THREATS PAGE -->
     <div class="page" id="page-threats">
       <div class="kpi-grid kpi-grid-3">
@@ -735,7 +743,7 @@ canvas{display:block;max-width:100%;}
           <span class="kpi-label">Scanned This Week</span>
         </div>
       </div>
- 
+
       <div class="table-card">
         <div class="table-header">
           <span class="table-title">Active Threat Log</span>
@@ -751,12 +759,12 @@ canvas{display:block;max-width:100%;}
         </div>
       </div>
     </div>
- 
+
     <!-- MESSAGES PAGE -->
     <div class="page" id="page-messages">
       <div class="message-list" id="message-list"></div>
     </div>
- 
+
     <!-- CLIENTS PAGE -->
     <div class="page" id="page-clients">
       <div style="display:flex;justify-content:flex-end;margin-bottom:20px;">
@@ -776,7 +784,7 @@ canvas{display:block;max-width:100%;}
         </div>
       </div>
     </div>
- 
+
     <!-- TICKETS PAGE -->
     <div class="page" id="page-tickets">
       <div style="display:flex;justify-content:flex-end;margin-bottom:20px;">
@@ -796,7 +804,7 @@ canvas{display:block;max-width:100%;}
         </div>
       </div>
     </div>
- 
+
     <!-- ASSETS PAGE -->
     <div class="page" id="page-assets">
       <div class="kpi-grid kpi-grid-4">
@@ -831,7 +839,7 @@ canvas{display:block;max-width:100%;}
         </div>
       </div>
     </div>
- 
+
     <!-- REPORTS PAGE -->
     <div class="page" id="page-reports">
       <div class="kpi-grid kpi-grid-3">
@@ -863,13 +871,13 @@ canvas{display:block;max-width:100%;}
     </div>
   </main>
 </div>
- 
+
 <!-- MODAL -->
 <div class="modal-overlay" id="modal-overlay">
   <div class="modal" id="modal-content">
   </div>
 </div>
- 
+
 <script>
 /* ═══════════════════════════════════════
    LOGIN
@@ -893,7 +901,7 @@ function doLogout(){
   document.getElementById('login-pass').value='';
   closeSidebar();
 }
- 
+
 /* ═══════════════════════════════════════
    SIDEBAR TOGGLE (mobile)
 ═══════════════════════════════════════ */
@@ -905,7 +913,7 @@ function closeSidebar(){
   document.getElementById('sidebar').classList.remove('open');
   document.getElementById('sidebar-overlay').classList.remove('active');
 }
- 
+
 /* ═══════════════════════════════════════
    NAVIGATION
 ═══════════════════════════════════════ */
@@ -919,7 +927,7 @@ function showPage(name, el){
   closeSidebar();
   setTimeout(redrawCharts, 50);
 }
- 
+
 /* ═══════════════════════════════════════
    CLOCK
 ═══════════════════════════════════════ */
@@ -927,7 +935,7 @@ setInterval(()=>{
   document.getElementById('clock').textContent =
     new Date().toLocaleTimeString('en-GB');
 },1000);
- 
+
 /* ═══════════════════════════════════════
    CHARTS
 ═══════════════════════════════════════ */
@@ -939,13 +947,13 @@ function drawBarChart(canvasId, labels, datasets, height=180){
   const ctx = c.getContext('2d');
   const H = height;
   c.width = W; c.height = H;
- 
+
   ctx.clearRect(0,0,W,H);
   const pad = {l:40,r:20,t:10,b:30};
   const chartW = W-pad.l-pad.r;
   const chartH = H-pad.t-pad.b;
   const n = labels.length;
- 
+
   // Grid
   const maxVal = Math.max(...datasets.flatMap(d=>d.data)) * 1.2;
   const gridLines = 4;
@@ -958,7 +966,7 @@ function drawBarChart(canvasId, labels, datasets, height=180){
     ctx.font = '9px Space Mono'; ctx.textAlign='right';
     ctx.fillText(Math.round(i/gridLines*maxVal), pad.l-6, y+3);
   }
- 
+
   // Bars
   const barW = chartW / n / (datasets.length+0.5);
   datasets.forEach((ds, di) => {
@@ -972,7 +980,7 @@ function drawBarChart(canvasId, labels, datasets, height=180){
       ctx.fill();
     });
   });
- 
+
   // Labels
   ctx.fillStyle = 'rgba(74,106,138,0.9)';
   ctx.font = '9px Space Mono'; ctx.textAlign='center';
@@ -981,17 +989,65 @@ function drawBarChart(canvasId, labels, datasets, height=180){
     ctx.fillText(l, x, H-8);
   });
 }
- 
+
 function drawDonut(canvasId, data, labels, colors){
   const c = document.getElementById(canvasId);
   if(!c) return;
   const W = c.offsetWidth || c.parentElement.offsetWidth;
   if(!W) return; // canvas is hidden (page not active) — skip until visible
+
+  const narrow = W < 320;
+  const H = narrow ? 180 + labels.length*22 : 180;
   const ctx = c.getContext('2d');
-  const H = 180;
   c.width = W; c.height = H;
-  const cx = W*0.4, cy = H/2, r = Math.min(W*0.35, H*0.38);
+  ctx.clearRect(0,0,W,H);
+
   const total = data.reduce((a,b)=>a+b,0);
+
+  if(narrow){
+    // Stack: donut centered on top, legend listed below
+    const cx = W/2, cy = 95, r = Math.min(W*0.32, 80);
+    let angle = -Math.PI/2;
+    data.forEach((val,i) => {
+      const sweep = (val/total)*Math.PI*2;
+      ctx.beginPath();
+      ctx.moveTo(cx,cy);
+      ctx.arc(cx,cy,r,angle,angle+sweep);
+      ctx.closePath();
+      ctx.fillStyle = colors[i];
+      ctx.fill();
+      ctx.strokeStyle = '#030810';
+      ctx.lineWidth = 3; ctx.stroke();
+      angle += sweep;
+    });
+    ctx.beginPath(); ctx.arc(cx,cy,r*0.58,0,Math.PI*2);
+    ctx.fillStyle = '#060e1e'; ctx.fill();
+    ctx.fillStyle = '#e8f4ff';
+    ctx.font = 'bold 20px Syne';
+    ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+    ctx.fillText(total, cx, cy-4);
+    ctx.font = '9px Space Mono'; ctx.fillStyle = 'rgba(74,106,138,0.8)';
+    ctx.fillText('TOTAL', cx, cy+14);
+
+    const legendStartY = cy + r + 28;
+    labels.forEach((l,i) => {
+      const ly = legendStartY + i*22;
+      const lx = W/2 - 60;
+      ctx.fillStyle = colors[i];
+      ctx.beginPath(); ctx.arc(lx,ly,5,0,Math.PI*2); ctx.fill();
+      ctx.fillStyle = '#e8f4ff';
+      ctx.font = '11px DM Sans'; ctx.textAlign='left';
+      ctx.fillText(l + ' (' + data[i] + ')', lx+12, ly+4);
+    });
+    return;
+  }
+
+  // Wide layout: donut on left, legend on right with width-aware spacing
+  ctx.font = '11px DM Sans';
+  const legendW = Math.max(...labels.map((l,i)=>ctx.measureText(l + ' (' + data[i] + ')').width)) + 18;
+  const donutAreaW = Math.max(W - legendW - 24, 90);
+  const cx = donutAreaW/2 + 12, cy = H/2, r = Math.min(donutAreaW*0.42, H*0.38, 70);
+
   let angle = -Math.PI/2;
   data.forEach((val,i) => {
     const sweep = (val/total)*Math.PI*2;
@@ -1005,19 +1061,18 @@ function drawDonut(canvasId, data, labels, colors){
     ctx.lineWidth = 3; ctx.stroke();
     angle += sweep;
   });
-  // hole
   ctx.beginPath(); ctx.arc(cx,cy,r*0.58,0,Math.PI*2);
   ctx.fillStyle = '#060e1e'; ctx.fill();
-  // center text
   ctx.fillStyle = '#e8f4ff';
-  ctx.font = 'bold 20px Syne';
+  ctx.font = 'bold 18px Syne';
   ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
   ctx.fillText(total, cx, cy-4);
   ctx.font = '9px Space Mono'; ctx.fillStyle = 'rgba(74,106,138,0.8)';
   ctx.fillText('TOTAL', cx, cy+14);
-  // legend
+
+  const lx = donutAreaW + 24;
   labels.forEach((l,i) => {
-    const lx = W*0.72, ly = H/2 - (labels.length-1)*14 + i*28;
+    const ly = H/2 - (labels.length-1)*14 + i*28;
     ctx.fillStyle = colors[i];
     ctx.beginPath(); ctx.arc(lx,ly,5,0,Math.PI*2); ctx.fill();
     ctx.fillStyle = '#e8f4ff';
@@ -1025,7 +1080,7 @@ function drawDonut(canvasId, data, labels, colors){
     ctx.fillText(l + ' (' + data[i] + ')', lx+12, ly+4);
   });
 }
- 
+
 function redrawCharts(){
   drawBarChart('chart-threats',
     ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'],
@@ -1041,12 +1096,12 @@ function redrawCharts(){
     [{data:[12400,14200,11800,16000], color:'rgba(255,59,92,0.7)'}], 200
   );
 }
- 
+
 window.addEventListener('resize', () => {
   clearTimeout(window._resizeTimer);
   window._resizeTimer = setTimeout(redrawCharts, 150);
 });
- 
+
 /* ═══════════════════════════════════════
    DATA
 ═══════════════════════════════════════ */
@@ -1058,7 +1113,7 @@ const sampleThreats = [
   {time:'07:30:00', type:'Malware', src:'192.168.1.44', target:'Workstation', sev:'CRITICAL', status:'blocked'},
   {time:'07:12:22', type:'DDoS', src:'Multiple', target:'Web Server', sev:'HIGH', status:'mitigated'},
 ];
- 
+
 const sampleMessages = [
   {from:'Chidi Okafor', company:'Zenith Bank Plc', service:'Cybersecurity Assessment', time:'10 min ago', preview:'We need a full security audit of our core banking infrastructure ahead of CBN inspection in Q3...', unread:true},
   {from:'Amina Yusuf', company:'MTN Nigeria', service:'Cloud Solutions', time:'1 hr ago', preview:'Looking to migrate 50+ VMs to AWS. Need help with cloud security posture and compliance framework...', unread:true},
@@ -1066,7 +1121,7 @@ const sampleMessages = [
   {from:'Fatima Al-Hassan', company:'NNPC Ltd', service:'Managed IT Support', time:'Yesterday', preview:'We want to outsource IT helpdesk for 300+ staff. Please share your managed service packages...', unread:true},
   {from:'Tunde Adeyemi', company:'Dangote Group', service:'Full IT Audit', time:'2 days ago', preview:'Following our recent expansion, we need a comprehensive IT infrastructure audit across all subsidiaries...', unread:false},
 ];
- 
+
 const sampleClients = [
   {company:'Zenith Bank Plc', contact:'Chidi Okafor', services:'Cybersecurity, Managed IT', since:'2024', status:'active'},
   {company:'MTN Nigeria', contact:'Amina Yusuf', services:'Cloud Solutions', since:'2023', status:'active'},
@@ -1075,7 +1130,7 @@ const sampleClients = [
   {company:'Stanbic IBTC', contact:'Ngozi Chukwu', services:'Managed IT, Cloud', since:'2024', status:'active'},
   {company:'GTBank', contact:'Ola Williams', services:'Cybersecurity', since:'2023', status:'pending'},
 ];
- 
+
 const sampleTickets = [
   {id:'TKT-0091', title:'VPN connectivity drops for remote staff', client:'Dangote Group', priority:'HIGH', assigned:'Kemi T.', status:'open'},
   {id:'TKT-0090', title:'Email server blacklisted — spam reports', client:'GTBank', priority:'CRITICAL', assigned:'Unassigned', status:'open'},
@@ -1083,7 +1138,7 @@ const sampleTickets = [
   {id:'TKT-0088', title:'Office Wi-Fi SSID broadcasting issues', client:'MTN Nigeria', priority:'LOW', assigned:'Kemi T.', status:'resolved'},
   {id:'TKT-0087', title:'Microsoft 365 license audit and cleanup', client:'NNPC Ltd', priority:'LOW', assigned:'Ugo A.', status:'resolved'},
 ];
- 
+
 const sampleAssets = [
   {name:'edge-router-01', type:'Router', client:'Zenith Bank', ip:'10.10.1.1', seen:'2 min ago', status:'active'},
   {name:'fw-cluster-prod', type:'Firewall', client:'Dangote Group', ip:'192.168.1.254', seen:'1 min ago', status:'active'},
@@ -1092,14 +1147,14 @@ const sampleAssets = [
   {name:'vpn-gw-lagos', type:'VPN GW', client:'NNPC Ltd', ip:'196.12.44.5', seen:'5 min ago', status:'active'},
   {name:'ws-finance-04', type:'Workstation', client:'GTBank', ip:'192.168.5.44', seen:'2h ago', status:'critical'},
 ];
- 
+
 /* ═══════════════════════════════════════
    POPULATE TABLES
 ═══════════════════════════════════════ */
 function initDashboard(){
   // Charts
   setTimeout(redrawCharts, 100);
- 
+
   // Threats table
   const tb = document.getElementById('threat-table-body');
   sampleThreats.forEach(t => {
@@ -1113,7 +1168,7 @@ function initDashboard(){
       <td><span class="status-badge active">${t.status}</span></td>
     </tr>`;
   });
- 
+
   // Messages
   const ml = document.getElementById('message-list');
   sampleMessages.forEach((m,i) => {
@@ -1127,7 +1182,7 @@ function initDashboard(){
       <p class="msg-preview">${m.preview}</p>
     </div>`;
   });
- 
+
   // Clients table
   const ct = document.getElementById('clients-table');
   sampleClients.forEach(c => {
@@ -1140,7 +1195,7 @@ function initDashboard(){
       <td><button class="action-btn">Manage</button></td>
     </tr>`;
   });
- 
+
   // Tickets
   const tkt = document.getElementById('tickets-table');
   sampleTickets.forEach(t => {
@@ -1155,7 +1210,7 @@ function initDashboard(){
       <td><button class="action-btn">Open</button></td>
     </tr>`;
   });
- 
+
   // Assets
   const at = document.getElementById('assets-table');
   sampleAssets.forEach(a => {
@@ -1169,25 +1224,25 @@ function initDashboard(){
       <td><span class="status-badge ${sc}">${a.status}</span></td>
     </tr>`;
   });
- 
+
   // Update badge
   document.getElementById('msg-badge').textContent = sampleMessages.filter(m=>m.unread).length;
 }
- 
+
 function updateBadge(){
   const unread = document.querySelectorAll('.message-item.unread').length;
   const badge = document.getElementById('msg-badge');
   badge.textContent = unread;
   badge.style.display = unread ? '' : 'none';
 }
- 
+
 /* ═══════════════════════════════════════
    MODALS
 ═══════════════════════════════════════ */
 function openModal(type){
   const overlay = document.getElementById('modal-overlay');
   const mc = document.getElementById('modal-content');
- 
+
   if(type==='client'){
     mc.innerHTML = `<h3>Add New Client</h3>
       <div class="modal-field"><label>Company Name</label><input type="text" placeholder="Acme Corp"/></div>
@@ -1214,14 +1269,14 @@ function openModal(type){
   }
   overlay.classList.add('open');
 }
- 
+
 function closeModal(){
   document.getElementById('modal-overlay').classList.remove('open');
 }
 document.getElementById('modal-overlay').addEventListener('click', e => {
   if(e.target === e.currentTarget) closeModal();
 });
- 
+
 /* ═══════════════════════════════════════
    AUTO-UPDATE THREATS
 ═══════════════════════════════════════ */
