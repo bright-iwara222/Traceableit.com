@@ -104,14 +104,34 @@ body{
 .app.active{opacity:1;}
 
 /* SIDEBAR */
-.sidebar{
-  position: absolute;
-  left: -240px;
-  background:var(--sidebar-bg);
-  border-right:1px solid var(--border);
-  display:flex;flex-direction:column;
-  height:100vh;overflow:hidden;
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    left: -240px;
+    top: 0;
+    height: 100vh;
+    width: 240px;
+    transition: left 0.3s ease;
+    z-index: 1000;
+  }
 }
+
+.sidebar.open {
+  left: 0;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 999;
+}
+
+.overlay.active {
+  display: block;
+}
+  
 .sidebar-header{
   padding:20px 20px 16px;
   border-bottom:1px solid var(--border);
@@ -535,6 +555,7 @@ canvas{display:block;}
   <!-- MAIN CONTENT -->
   <main class="main">
     <div class="topbar">
+      <button class="menu-btn">☰</button>
       <div class="topbar-title" id="page-title">Dashboard</div>
       <div class="topbar-right">
         <span class="sys-status">ALL SYSTEMS NOMINAL</span>
