@@ -104,7 +104,7 @@ body:hover .cursor { opacity: 1; }
 nav {
   position: fixed; top: 0; width: 100%;
   display: flex; justify-content: space-between; align-items: center;
-  padding: 26px 60px;
+  padding: 16px 60px;
   background: rgba(3, 14, 16, 0.85);
   backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--border);
@@ -112,10 +112,10 @@ nav {
 }
 
 .nav-logo {
-  display: flex; align-items: center; gap: 26px;
+  display: flex; align-items: center; gap: 36px;
 }
 .nav-logo .logo-icon {
-  width: 36px; height: 36px;
+  width: 56px; height: 56px;
   border: 1px solid var(--accent);
   border-radius: 8px;
   display: flex; align-items: center; justify-content: center;
@@ -123,7 +123,7 @@ nav {
 }
 .nav-logo .logo-icon::before {
   content: '';
-  position: absolute; width: 150%; height: 2px;
+  position: absolute; width: 150%; height: 10px;
   background: var(--accent); opacity: 0.6;
   animation: scan 2s linear infinite;
 }
