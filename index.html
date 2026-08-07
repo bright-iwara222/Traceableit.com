@@ -25,11 +25,8 @@
   --font-mono: 'Space Mono', monospace;
   --font-body: 'DM Sans', sans-serif;
 }
-
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-
 html { scroll-behavior: smooth; }
-
 body {
   background: var(--bg);
   color: var(--text);
@@ -37,7 +34,6 @@ body {
   overflow-x: hidden;
   cursor: none;
 }
-
 /* ═══════════════════════════════════════
    CUSTOM CURSOR
 ═══════════════════════════════════════ */
@@ -61,7 +57,6 @@ body {
   transition: transform 0.15s ease-out, width 0.3s, height 0.3s;
 }
 body:hover .cursor { opacity: 1; }
-
 /* ═══════════════════════════════════════
    MATRIX CANVAS
 ═══════════════════════════════════════ */
@@ -71,7 +66,6 @@ body:hover .cursor { opacity: 1; }
   opacity: 0.04; z-index: 0;
   pointer-events: none;
 }
-
 /* ═══════════════════════════════════════
    SCAN LINE OVERLAY
 ═══════════════════════════════════════ */
@@ -87,7 +81,6 @@ body:hover .cursor { opacity: 1; }
     rgba(0,0,0,0.03) 4px
   );
 }
-
 /* ═══════════════════════════════════════
    NETWORK NODES ANIMATION
 ═══════════════════════════════════════ */
@@ -97,7 +90,6 @@ body:hover .cursor { opacity: 1; }
   z-index: 0; opacity: 0.15;
   pointer-events: none;
 }
-
 /* ═══════════════════════════════════════
    NAV
 ═══════════════════════════════════════ */
@@ -110,7 +102,6 @@ nav {
   border-bottom: 1px solid var(--border);
   z-index: 100;
 }
-
 .nav-logo {
   display: flex; align-items: center; gap: 36px;
 }
@@ -132,7 +123,6 @@ nav {
 }
 .nav-logo .logo-icon img { width: 56px; height: 56px; object-fit: cover; z-index: 1; display: block; }
 .nav-logo .nav-full-logo { height: 70px; width: auto; display: block; }
-
 nav ul {
   display: flex; gap: 30px; list-style: none; align-items: center;
 }
@@ -154,7 +144,6 @@ nav ul li a::after {
 }
 nav ul li a:hover { color: var(--accent); }
 nav ul li a:hover::after { width: 100%; }
-
 .nav-admin-btn {
   background: transparent;
   border: 1px solid var(--accent);
@@ -172,7 +161,6 @@ nav ul li a:hover::after { width: 100%; }
   background: var(--accent);
   color: var(--bg);
 }
-
 /* ═══════════════════════════════════════
    HERO
 ═══════════════════════════════════════ */
@@ -183,7 +171,6 @@ nav ul li a:hover::after { width: 100%; }
   text-align: center; padding: 120px 20px 80px;
   position: relative; z-index: 2;
 }
-
 .hero-badge {
   display: inline-flex; align-items: center; gap: 8px;
   background: rgba(0,210,255,0.06);
@@ -203,7 +190,6 @@ nav ul li a:hover::after { width: 100%; }
   0%,100% { opacity: 1; transform: scale(1); }
   50% { opacity: 0.4; transform: scale(0.7); }
 }
-
 .hero h2 {
   font-family: var(--font-display);
   font-size: clamp(36px, 6vw, 72px);
@@ -217,18 +203,15 @@ nav ul li a:hover::after { width: 100%; }
   color: transparent;
   -webkit-text-stroke: 1px var(--accent);
 }
-
 .hero p {
   margin-top: 20px;
   font-size: 17px; color: var(--muted);
   max-width: 600px; line-height: 1.7;
   font-weight: 300;
 }
-
 .hero-cta {
   display: flex; gap: 14px; margin-top: 36px; flex-wrap: wrap; justify-content: center;
 }
-
 .btn-primary {
   padding: 14px 32px;
   background: var(--accent);
@@ -252,7 +235,6 @@ nav ul li a:hover::after { width: 100%; }
 }
 .btn-primary:hover::before { width: 300px; height: 300px; }
 .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(0,210,255,0.3); }
-
 .btn-outline {
   padding: 14px 32px;
   background: transparent;
@@ -267,7 +249,6 @@ nav ul li a:hover::after { width: 100%; }
   border-color: var(--accent);
   color: var(--accent);
 }
-
 /* Threat counter */
 .hero-stats {
   display: flex; gap: 40px; margin-top: 60px;
@@ -287,7 +268,6 @@ nav ul li a:hover::after { width: 100%; }
   margin-top: 4px; display: block;
   font-family: var(--font-mono);
 }
-
 /* Threat ticker */
 .threat-ticker {
   position: absolute; bottom: 30px; left: 0; right: 0;
@@ -319,12 +299,10 @@ nav ul li a:hover::after { width: 100%; }
 }
 .ticker-item .ti-type { color: var(--danger); margin-right: 8px; }
 .ticker-item .ti-loc { color: var(--accent3); margin-left: 8px; }
-
 /* ═══════════════════════════════════════
    SECTIONS COMMON
 ═══════════════════════════════════════ */
 section { position: relative; z-index: 2; }
-
 .section-header {
   margin-bottom: 50px;
 }
@@ -344,7 +322,6 @@ section { position: relative; z-index: 2; }
   font-size: 16px; line-height: 1.7;
   max-width: 500px;
 }
-
 /* ═══════════════════════════════════════
    SERVICES
 ═══════════════════════════════════════ */
@@ -352,7 +329,6 @@ section { position: relative; z-index: 2; }
   padding: 100px 60px;
   background: linear-gradient(180deg, var(--bg) 0%, var(--bg2) 100%);
 }
-
 .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -362,7 +338,6 @@ section { position: relative; z-index: 2; }
   border-radius: 16px;
   overflow: hidden;
 }
-
 .service-card {
   background: var(--bg);
   padding: 36px 30px;
@@ -378,7 +353,6 @@ section { position: relative; z-index: 2; }
 }
 .service-card:hover::before { opacity: 1; }
 .service-card:hover { background: rgba(0,20,50,0.9); }
-
 .sc-icon {
   width: 48px; height: 48px;
   border: 1px solid var(--border);
@@ -391,14 +365,12 @@ section { position: relative; z-index: 2; }
   border-color: var(--accent);
   box-shadow: 0 0 20px rgba(0,210,255,0.15);
 }
-
 .sc-tag {
   font-family: var(--font-mono);
   font-size: 10px; color: var(--accent);
   letter-spacing: 2px; text-transform: uppercase;
   margin-bottom: 8px; display: block;
 }
-
 .service-card h3 {
   font-family: var(--font-display);
   font-size: 20px; font-weight: 700;
@@ -408,7 +380,6 @@ section { position: relative; z-index: 2; }
   color: var(--muted); font-size: 14px;
   line-height: 1.7;
 }
-
 .sc-features {
   margin-top: 20px; list-style: none;
 }
@@ -421,7 +392,6 @@ section { position: relative; z-index: 2; }
   content: '▶';
   font-size: 8px; color: var(--accent3);
 }
-
 /* ═══════════════════════════════════════
    THREAT MAP / VISUALIZATION
 ═══════════════════════════════════════ */
@@ -429,13 +399,11 @@ section { position: relative; z-index: 2; }
   padding: 100px 60px;
   background: var(--bg2);
 }
-
 .threat-vis {
   display: grid;
   grid-template-columns: 1fr 350px;
   gap: 30px; align-items: start;
 }
-
 .threat-map-wrap {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -462,13 +430,11 @@ section { position: relative; z-index: 2; }
   border-radius: 50%;
   animation: pulse-dot 1s ease-in-out infinite;
 }
-
 #threat-canvas {
   width: 100%; height: 340px;
   border-radius: 8px;
   background: rgba(0,5,15,0.8);
 }
-
 .threat-log {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -479,7 +445,6 @@ section { position: relative; z-index: 2; }
   letter-spacing: 2px; color: var(--accent);
   text-transform: uppercase; margin-bottom: 16px;
 }
-
 .log-entry {
   padding: 10px 0;
   border-bottom: 1px solid rgba(255,255,255,0.04);
@@ -493,13 +458,126 @@ section { position: relative; z-index: 2; }
 .log-msg .log-ok { color: var(--accent3); }
 
 /* ═══════════════════════════════════════
+   CASE STUDIES & TESTIMONIALS STYLES
+═══════════════════════════════════════ */
+#case-studies {
+  padding: 100px 60px;
+  background: var(--bg);
+}
+.case-studies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+.case-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 32px;
+  transition: transform 0.3s, border-color 0.3s;
+}
+.case-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent);
+}
+.case-tag {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--accent3);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  display: block;
+}
+.case-card h3 {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.case-card p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+.case-metrics {
+  display: flex;
+  gap: 20px;
+  border-top: 1px solid var(--border);
+  padding-top: 16px;
+}
+.case-metric {
+  flex: 1;
+}
+.case-metric .val {
+  font-family: var(--font-mono);
+  font-size: 18px;
+  color: var(--accent);
+  font-weight: 700;
+  display: block;
+}
+.case-metric .lbl {
+  font-size: 11px;
+  color: var(--muted);
+  text-transform: uppercase;
+  font-family: var(--font-mono);
+}
+
+#testimonials {
+  padding: 100px 60px;
+  background: var(--bg2);
+}
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+.testimonial-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.testimonial-quote {
+  color: var(--text);
+  font-size: 15px;
+  line-height: 1.7;
+  font-style: italic;
+  margin-bottom: 24px;
+  position: relative;
+}
+.testimonial-quote::before {
+  content: '“';
+  font-family: var(--font-display);
+  font-size: 40px;
+  color: var(--accent);
+  position: absolute;
+  top: -20px;
+  left: -10px;
+  opacity: 0.3;
+}
+.testimonial-author h4 {
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 700;
+}
+.testimonial-author span {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* ═══════════════════════════════════════
    ABOUT
 ═══════════════════════════════════════ */
 #about {
   padding: 100px 60px;
   background: var(--bg);
 }
-
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -509,7 +587,6 @@ section { position: relative; z-index: 2; }
   color: var(--muted); font-size: 16px;
   line-height: 1.8; margin-bottom: 16px;
 }
-
 .values-grid {
   display: grid; grid-template-columns: 1fr 1fr;
   gap: 14px; margin-top: 30px;
@@ -527,7 +604,6 @@ section { position: relative; z-index: 2; }
   font-size: 14px; font-weight: 700; margin-bottom: 4px;
 }
 .value-item p { font-size: 12px; color: var(--muted); line-height: 1.5; }
-
 .about-visual {
   position: relative;
 }
@@ -567,7 +643,6 @@ section { position: relative; z-index: 2; }
   vertical-align: middle; margin-left: 2px;
 }
 @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
-
 /* ═══════════════════════════════════════
    CONTACT
 ═══════════════════════════════════════ */
@@ -575,18 +650,15 @@ section { position: relative; z-index: 2; }
   padding: 100px 60px;
   background: var(--bg2);
 }
-
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 60px; align-items: start;
 }
-
 .contact-info p {
   color: var(--muted); font-size: 16px;
   line-height: 1.7; margin-bottom: 30px;
 }
-
 .contact-items { display: flex; flex-direction: column; gap: 16px; }
 .contact-item {
   display: flex; align-items: center; gap: 14px;
@@ -599,7 +671,6 @@ section { position: relative; z-index: 2; }
 .ci-icon { font-size: 20px; }
 .ci-text { font-size: 14px; }
 .ci-label { color: var(--muted); font-size: 11px; font-family: var(--font-mono); display: block; }
-
 /* FORM */
 .contact-form {
   background: var(--surface);
@@ -628,7 +699,6 @@ input:focus, textarea:focus, select:focus {
 }
 select option { background: #060e1e; }
 textarea { resize: vertical; min-height: 120px; }
-
 .form-status {
   padding: 12px 16px;
   border-radius: 8px; font-size: 13px;
@@ -644,7 +714,6 @@ textarea { resize: vertical; min-height: 120px; }
   border: 1px solid var(--danger);
   color: var(--danger);
 }
-
 /* ═══════════════════════════════════════
    WHATSAPP BUTTON
 ═══════════════════════════════════════ */
@@ -680,7 +749,6 @@ textarea { resize: vertical; min-height: 120px; }
   pointer-events: none;
 }
 .whatsapp-btn:hover .whatsapp-tooltip { opacity: 1; }
-
 /* ═══════════════════════════════════════
    FOOTER
 ═══════════════════════════════════════ */
@@ -710,7 +778,6 @@ footer {
   text-decoration: none; transition: color 0.2s;
 }
 .footer-links a:hover { color: var(--accent); }
-
 /* ═══════════════════════════════════════
    GLITCH ANIMATION
 ═══════════════════════════════════════ */
@@ -744,7 +811,6 @@ footer {
   92% { opacity: 0.8; transform: translateX(4px); }
   94% { opacity: 0; transform: translateX(-4px); }
 }
-
 /* ═══════════════════════════════════════
    MOBILE HAMBURGER
 ═══════════════════════════════════════ */
@@ -776,7 +842,6 @@ footer {
   transition: color 0.2s;
 }
 .mobile-menu ul li a:hover { color: var(--accent); }
-
 /* ═══════════════════════════════════════
    RESPONSIVE
 ═══════════════════════════════════════ */
@@ -788,6 +853,8 @@ footer {
   section { padding: 70px 24px; }
   #services { padding: 70px 24px; }
   #security { padding: 70px 24px; }
+  #case-studies { padding: 70px 24px; }
+  #testimonials { padding: 70px 24px; }
   #about { padding: 70px 24px; }
   #contact { padding: 70px 24px; }
   
@@ -799,7 +866,6 @@ footer {
   .footer-inner { flex-direction: column; text-align: center; }
   .values-grid { grid-template-columns: 1fr; }
 }
-
 /* Fade-in animation for sections */
 .fade-in {
   opacity: 0; transform: translateY(30px);
@@ -809,15 +875,12 @@ footer {
 </style>
 </head>
 <body>
-
 <!-- Background canvas animations -->
 <canvas id="network-canvas"></canvas>
 <div class="scanlines"></div>
-
 <!-- Custom cursor -->
 <div class="cursor" id="cursor"></div>
 <div class="cursor-ring" id="cursor-ring"></div>
-
 <!-- WhatsApp button -->
 <a class="whatsapp-btn" href="https://wa.me/2349080286995?text=Hello%20Traceable%20I.T.%20Ltd%2C%20I%20need%20a%20consultation." target="_blank" rel="noopener" title="Chat on WhatsApp">
   <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
@@ -825,7 +888,6 @@ footer {
   </svg>
   <span class="whatsapp-tooltip">Chat with us</span>
 </a>
-
 <!-- NAV -->
 <nav id="navbar">
   <div class="nav-logo">
@@ -836,6 +898,8 @@ footer {
   </div>
   <ul>
     <li><a href="#services">Services</a></li>
+    <li><a href="#case-studies">Case Studies</a></li>
+    <li><a href="#testimonials">Testimonials</a></li>
     <li><a href="#pricing">Pricing</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -844,36 +908,33 @@ footer {
     <span></span><span></span><span></span>
   </div>
 </nav>
-
 <!-- Mobile menu -->
 <div class="mobile-menu" id="mobile-menu">
   <ul>
     <li><a href="#services" onclick="toggleMenu()">Services</a></li>
+    <li><a href="#case-studies" onclick="toggleMenu()">Case Studies</a></li>
+    <li><a href="#testimonials" onclick="toggleMenu()">Testimonials</a></li>
     <li><a href="#pricing" onclick="toggleMenu()">Pricing</a></li>
     <li><a href="#about" onclick="toggleMenu()">About</a></li>
     <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
  <!--  <li><a href="/admin-dashboard.html">Admin Portal</a></li> -->
   </ul>
 </div>
-
 <!-- HERO -->
 <div class="hero">
   <div class="hero-badge">
     <span class="dot"></span>
     Transparent. Documented. Accountable IT.
   </div>
-
   <h2 class="glitch" data-text="Making I.T. Transparent,">
     Making I.T. <span class="accent">Transparent,</span><br>
     <span class="accent2">Traceable</span> &amp; Accountable.
   </h2>
   <p>Nigeria's I.T. services firm built to solve the lack of visibility, accountability, and trust — for businesses that demand structure, clarity, and results.</p>
-
   <div class="hero-cta">
     <a href="#contact" class="btn-primary">Request Consultation</a>
     <a href="#services" class="btn-outline">Explore Services</a>
   </div>
-
   <div class="hero-stats">
     <div class="stat">
       <span class="number">99.97%</span>
@@ -892,7 +953,6 @@ footer {
       <span class="label">Documented actions</span>
     </div>
   </div>
-
   <div class="threat-ticker">
     <span class="ticker-label">⚠ LIVE FEED</span>
     <div class="ticker-track" id="ticker-track">
@@ -900,7 +960,6 @@ footer {
     </div>
   </div>
 </div>
-
 <!-- SERVICES -->
 <section id="services" class="fade-in">
   <div class="section-header">
@@ -908,7 +967,6 @@ footer {
     <h2 class="section-title">End-to-End I.T. Services</h2>
     <p class="section-sub">Tailored I.T. solutions for businesses — ensuring smooth operations, security, and growth.</p>
   </div>
-
   <div class="services-grid">
     <div class="service-card">
       <div class="sc-icon">🔗</div>
@@ -921,7 +979,6 @@ footer {
         <li>Network monitoring &amp; troubleshooting</li>
       </ul>
     </div>
-
     <div class="service-card">
       <div class="sc-icon">☁️</div>
       <span class="sc-tag">Cloud</span>
@@ -933,7 +990,6 @@ footer {
         <li>Data backup &amp; recovery</li>
       </ul>
     </div>
-
     <div class="service-card">
       <div class="sc-icon">🛡️</div>
       <span class="sc-tag">Security</span>
@@ -945,7 +1001,6 @@ footer {
         <li>24/7 monitoring &amp; incident response</li>
       </ul>
     </div>
-
     <div class="service-card">
       <div class="sc-icon">⚙️</div>
       <span class="sc-tag">Managed IT</span>
@@ -957,7 +1012,6 @@ footer {
         <li>Hardware &amp; software troubleshooting</li>
       </ul>
     </div>
-
     <div class="service-card">
       <div class="sc-icon">💡</div>
       <span class="sc-tag">Custom</span>
@@ -969,7 +1023,6 @@ footer {
         <li>Custom I.T. solutions for hotels, schools &amp; SMEs</li>
       </ul>
     </div>
-
     <div class="service-card">
       <div class="sc-icon">🎨</div>
       <span class="sc-tag">Branding</span>
@@ -984,7 +1037,6 @@ footer {
     </div>
   </div>
 </section>
-
 <!-- SECURITY VISUALIZATION -->
 <section id="security" class="fade-in">
   <div class="section-header">
@@ -992,7 +1044,6 @@ footer {
     <h2 class="section-title">Preventive &amp; Detective I.T.</h2>
     <p class="section-sub">Most I.T. firms are reactive. We combine preventive controls with detective monitoring to identify risks before they become problems.</p>
   </div>
-
   <div class="threat-vis">
     <div class="threat-map-wrap">
       <div class="threat-map-header">
@@ -1001,7 +1052,6 @@ footer {
       </div>
       <canvas id="threat-canvas"></canvas>
     </div>
-
     <div class="threat-log">
       <h4>// Security Log</h4>
       <div id="log-container">
@@ -1030,19 +1080,105 @@ footer {
   </div>
 </section>
 
+<!-- CASE STUDIES -->
+<section id="case-studies" class="fade-in">
+  <div class="section-header">
+    <span class="section-tag">// 03 — proven results</span>
+    <h2 class="section-title">Case Studies</h2>
+    <p class="section-sub">Real-world examples of how our documented, proactive IT operations solve complex infrastructural challenges.</p>
+  </div>
+  <div class="case-studies-grid">
+    <div class="case-card">
+      <span class="case-tag">Hospitality Sector — Calabar</span>
+      <h3>Luxury Hotel Network & Connectivity Overhaul</h3>
+      <p>Eliminated persistent guest Wi-Fi downtime and secured property management databases with dedicated VLAN segmentation and live monitoring.</p>
+      <div class="case-metrics">
+        <div class="case-metric">
+          <span class="val">99.9%</span>
+          <span class="lbl">Uptime Achieved</span>
+        </div>
+        <div class="case-metric">
+          <span class="val">&lt; 15m</span>
+          <span class="lbl">Avg Incident Resolution</span>
+        </div>
+      </div>
+    </div>
+    <div class="case-card">
+      <span class="case-tag">Financial Services — Lagos</span>
+      <h3>Cloud Migration & Zero-Trust Security Policy</h3>
+      <p>Migrated legacy on-premise infrastructure to a secure Azure setup, complete with automated backups, IAM controls, and continuous compliance logs.</p>
+      <div class="case-metrics">
+        <div class="case-metric">
+          <span class="val">100%</span>
+          <span class="lbl">Audit Compliance</span>
+        </div>
+        <div class="case-metric">
+          <span class="val">0</span>
+          <span class="lbl">Data Loss Incidents</span>
+        </div>
+      </div>
+    </div>
+    <div class="case-card">
+      <span class="case-tag">Educational Institution — Abuja</span>
+      <h3>Campus Automation & Endpoint Management</h3>
+      <p>Implemented centralized computer lab management, firewall filters, and a unified brand identity across all digital platforms.</p>
+      <div class="case-metrics">
+        <div class="case-metric">
+          <span class="val">350+</span>
+          <span class="lbl">Endpoints Managed</span>
+        </div>
+        <div class="case-metric">
+          <span class="val">40%</span>
+          <span class="lbl">IT Cost Reduction</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials" class="fade-in">
+  <div class="section-header">
+    <span class="section-tag">// 04 — client feedback</span>
+    <h2 class="section-title">What Our Clients Say</h2>
+    <p class="section-sub">Don't just take our word for it — hear from business leaders who trust us with their infrastructure.</p>
+  </div>
+  <div class="testimonials-grid">
+    <div class="testimonial-card">
+      <p class="testimonial-quote">"Traceable I.T. transformed our hotel's infrastructure. Every action is logged, every issue is documented, and we haven't experienced major network downtime since they took over."</p>
+      <div class="testimonial-author">
+        <h4>Executive Director</h4>
+        <span>Hospitality Management Group, Calabar</span>
+      </div>
+    </div>
+    <div class="testimonial-card">
+      <p class="testimonial-quote">"The level of transparency they provide is unmatched in Nigeria's tech space. The monthly IT health reports give our board total peace of mind regarding compliance and security."</p>
+      <div class="testimonial-author">
+        <h4>Chief Technology Officer</h4>
+        <span>Fintech Logistics Firm, Lagos</span>
+      </div>
+    </div>
+    <div class="testimonial-card">
+      <p class="testimonial-quote">"Their preventive monitoring identified a major network vulnerability before it could impact our operations. Fast, professional, and completely transparent."</p>
+      <div class="testimonial-author">
+        <h4>Operations Head</h4>
+        <span>Private Academy Network, Abuja</span>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ABOUT -->
 <section id="about" class="fade-in">
   <div class="section-header">
-    <span class="section-tag">// 03 — who we are</span>
+    <span class="section-tag">// 05 — who we are</span>
     <h2 class="section-title">If It's Not Documented,<br>It Didn't Happen.</h2>
   </div>
-
   <div class="about-grid">
     <div class="about-content">
       <p>Traceable I.T. Ltd is a professional I.T. services firm built to solve a major problem in Nigeria's I.T. space: lack of visibility, accountability, and trust.</p>
       <p>While many I.T. firms focus only on fixing issues, we focus on making I.T. <strong style="color:var(--accent)">transparent, traceable, and aligned with business outcomes</strong>. We don't just manage systems — we make them visible, auditable, and reliable.</p>
       <p>Every I.T. action must be visible, documented, and accountable. That's not just a promise — it's how we operate.</p>
-
       <div class="values-grid">
         <div class="value-item">
           <span class="vi-icon">👁️</span>
@@ -1066,7 +1202,6 @@ footer {
         </div>
       </div>
     </div>
-
     <div class="about-visual">
       <div class="terminal-window">
         <div class="terminal-bar">
@@ -1082,15 +1217,13 @@ footer {
     </div>
   </div>
 </section>
-
 <!-- PRICING -->
 <section id="pricing" class="fade-in" style="padding:100px 60px; background:var(--bg);">
   <div class="section-header">
-    <span class="section-tag">// 04 — pricing</span>
+    <span class="section-tag">// 06 — pricing</span>
     <h2 class="section-title">Transparent Pricing</h2>
     <p class="section-sub">No hidden fees — ever. Choose the package that fits your business needs.</p>
   </div>
-
   <div style="overflow-x:auto;">
     <table style="width:100%; border-collapse:collapse; font-family:var(--font-body); font-size:14px;">
       <thead>
@@ -1118,7 +1251,13 @@ footer {
         </tr>
         <tr style="background:var(--surface);">
           <td style="padding:20px; font-family:var(--font-display); font-weight:700; font-size:16px; white-space:nowrap;">One-Time</td>
-          <td style="padding:20px; color:var(--muted); line-height:1.7;">Ad-hoc I.T. project, troubleshooting, or setup<br><span style="color:rgba(0,210,255,0.6); font-size:12px;">+ Brand Identity: One-time logo, stationery, or social media branding project</span></td>
+          <td style="padding:20px; color:var(--muted); line-height:1.7;">
+            Ad-hoc I.T. project, troubleshooting, or setup<br>
+            <span style="color:rgba(0,210,255,0.6); font-size:12px;">+ Brand Identity: One-time logo, stationery, or social media branding project</span>
+            <div style="margin-top:8px; padding:6px 12px; background:rgba(255,184,0,0.08); border-left:2px solid #ffb800; font-size:11px; color:#ffb800; font-family:var(--font-mono);">
+              ⚠️ Note: One-time project costs vary by technical requirements and network scale. Request a custom scope for an accurate quote.
+            </div>
+          </td>
           <td style="padding:20px; text-align:right; font-family:var(--font-mono); color:var(--accent3); font-weight:700; white-space:nowrap;">From ₦1,500,000</td>
         </tr>
       </tbody>
@@ -1126,19 +1265,16 @@ footer {
   </div>
   <p style="text-align:center; margin-top:24px; font-family:var(--font-mono); font-size:12px; color:var(--accent); letter-spacing:1px;">✦ Custom packages available for enterprises &amp; specialized needs ✦</p>
 </section>
-
 <!-- CONTACT -->
 <section id="contact" class="fade-in">
   <div class="section-header">
-    <span class="section-tag">// 05 — get in touch</span>
+    <span class="section-tag">// 07 — get in touch</span>
     <h2 class="section-title">Start a Conversation</h2>
     <p class="section-sub">Let's build something secure and powerful together.</p>
   </div>
-
   <div class="contact-grid">
     <div class="contact-info">
       <p>Whether you need a network setup, security audit, brand identity, or ongoing I.T. management — our team is ready to respond with clarity and accountability.</p>
-
       <div class="contact-items">
         <div class="contact-item">
           <span class="ci-icon">📧</span>
@@ -1170,7 +1306,6 @@ footer {
         </div>
       </div>
     </div>
-
     <div class="contact-form">
       <form id="contact-form" onsubmit="handleFormSubmit(event)">
         <div class="form-row">
@@ -1217,13 +1352,14 @@ footer {
     </div>
   </div>
 </section>
-
 <!-- FOOTER -->
 <footer>
   <div class="footer-inner">
     <img class="footer-logo" src="traceable-logo.png" alt="Traceable I.T. Ltd">
     <ul class="footer-links">
       <li><a href="#services">Services</a></li>
+      <li><a href="#case-studies">Case Studies</a></li>
+      <li><a href="#testimonials">Testimonials</a></li>
       <li><a href="#pricing">Pricing</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#contact">Contact</a></li>
@@ -1231,7 +1367,6 @@ footer {
     <p class="footer-copy">© 2026 Traceable I.T. Ltd. All rights reserved.</p>
   </div>
 </footer>
-
 <script>
 /* ═══════════════════════════════════════
    CURSOR
@@ -1260,7 +1395,6 @@ document.querySelectorAll('a,button,input,textarea,select').forEach(el => {
     cursorRing.style.height = '36px';
   });
 });
-
 /* ═══════════════════════════════════════
    NETWORK NODES CANVAS
 ═══════════════════════════════════════ */
@@ -1268,11 +1402,9 @@ document.querySelectorAll('a,button,input,textarea,select').forEach(el => {
   const c = document.getElementById('network-canvas');
   const ctx = c.getContext('2d');
   let W, H, nodes = [], animId;
-
   function resize(){ W = c.width = innerWidth; H = c.height = innerHeight; }
   window.addEventListener('resize', resize);
   resize();
-
   for(let i = 0; i < 80; i++){
     nodes.push({
       x: Math.random()*W, y: Math.random()*H,
@@ -1281,7 +1413,6 @@ document.querySelectorAll('a,button,input,textarea,select').forEach(el => {
       r: Math.random()*2+1
     });
   }
-
   function draw(){
     ctx.clearRect(0,0,W,H);
     ctx.fillStyle='rgba(0,210,255,0.8)';
@@ -1311,7 +1442,6 @@ document.querySelectorAll('a,button,input,textarea,select').forEach(el => {
   }
   draw();
 })();
-
 /* ═══════════════════════════════════════
    THREAT MAP CANVAS
 ═══════════════════════════════════════ */
@@ -1321,7 +1451,6 @@ document.querySelectorAll('a,button,input,textarea,select').forEach(el => {
   const ctx = c.getContext('2d');
   c.width = c.offsetWidth || 600;
   c.height = 340;
-
   const packets = [];
   const nodes = [
     {x:0.5, y:0.5, label:'CORE', color:'#00d2ff'},
@@ -1331,9 +1460,7 @@ document.querySelectorAll('a,button,input,textarea,select').forEach(el => {
     {x:0.85, y:0.7, label:'VPN', color:'#00ff9d'},
     {x:0.5, y:0.85, label:'SOC', color:'#00d2ff'},
   ];
-
   const edges = [[0,1],[0,2],[0,3],[0,4],[0,5],[1,2],[3,5],[4,5]];
-
   function spawnPacket(){
     const edge = edges[Math.floor(Math.random()*edges.length)];
     const from = nodes[edge[0]], to = nodes[edge[1]];
@@ -1349,13 +1476,10 @@ document.querySelectorAll('a,button,input,textarea,select').forEach(el => {
       trail: []
     });
   }
-
   setInterval(spawnPacket, 300);
-
   function drawFrame(){
     ctx.clearRect(0,0,c.width,c.height);
     const W = c.width, H = c.height;
-
     // Grid
     ctx.strokeStyle = 'rgba(0,210,255,0.05)';
     ctx.lineWidth = 0.5;
@@ -1365,7 +1489,6 @@ document.querySelectorAll('a,button,input,textarea,select').forEach(el => {
     for(let y=0; y<H; y+=40){
       ctx.beginPath(); ctx.moveTo(0,y); ctx.lineTo(W,y); ctx.stroke();
     }
-
     // Edges
     edges.forEach(([a,b]) => {
       ctx.strokeStyle = 'rgba(0,210,255,0.12)';
@@ -1377,7 +1500,6 @@ document.querySelectorAll('a,button,input,textarea,select').forEach(el => {
       ctx.stroke();
       ctx.setLineDash([]);
     });
-
     // Packets
     for(let i=packets.length-1;i>=0;i--){
       const p = packets[i];
@@ -1386,7 +1508,6 @@ document.querySelectorAll('a,button,input,textarea,select').forEach(el => {
       p.y = lerp(p.y, p.ty, p.speed);
       p.trail.push({x:p.x, y:p.y});
       if(p.trail.length > 8) p.trail.shift();
-
       // Draw trail
       p.trail.forEach((pt,idx) => {
         ctx.beginPath();
@@ -1394,7 +1515,6 @@ document.querySelectorAll('a,button,input,textarea,select').forEach(el => {
         ctx.fillStyle = p.color + Math.floor(idx/p.trail.length*80).toString(16).padStart(2,'0');
         ctx.fill();
       });
-
       // Draw packet
       ctx.beginPath();
       ctx.arc(p.x*W, p.y*H, p.size, 0, Math.PI*2);
@@ -1404,10 +1524,8 @@ document.querySelectorAll('a,button,input,textarea,select').forEach(el => {
       ctx.arc(p.x*W, p.y*H, p.size+3, 0, Math.PI*2);
       ctx.strokeStyle = p.color + '44';
       ctx.lineWidth = 1; ctx.stroke();
-
       if(p.progress >= 1) packets.splice(i,1);
     }
-
     // Nodes
     nodes.forEach(n => {
       const nx = n.x*W, ny = n.y*H;
@@ -1417,27 +1535,22 @@ document.querySelectorAll('a,button,input,textarea,select').forEach(el => {
       grad.addColorStop(1, 'transparent');
       ctx.beginPath(); ctx.arc(nx,ny,24,0,Math.PI*2);
       ctx.fillStyle = grad; ctx.fill();
-
       // Node
       ctx.beginPath(); ctx.arc(nx,ny,8,0,Math.PI*2);
       ctx.fillStyle = n.color; ctx.fill();
       ctx.strokeStyle = n.color+'88'; ctx.lineWidth=2;
       ctx.beginPath(); ctx.arc(nx,ny,14,0,Math.PI*2); ctx.stroke();
-
       // Label
       ctx.fillStyle = '#e8f4ff';
       ctx.font = '10px Space Mono, monospace';
       ctx.textAlign = 'center';
       ctx.fillText(n.label, nx, ny+28);
     });
-
     requestAnimationFrame(drawFrame);
   }
-
   function lerp(a,b,t){ return a+(b-a)*t; }
   drawFrame();
 })();
-
 /* ═══════════════════════════════════════
    COUNTERS
 ═══════════════════════════════════════ */
@@ -1454,7 +1567,6 @@ window.addEventListener('load', () => {
     animateCount(document.getElementById('counter-clients'), 143, 2000);
   }, 800);
 });
-
 /* ═══════════════════════════════════════
    THREAT TICKER
 ═══════════════════════════════════════ */
@@ -1469,7 +1581,6 @@ const tickerEvents = [
   {type:'BLOCKED', msg:'Phishing payload', loc:'Johannesburg, ZA'},
   {type:'MITIGATED', msg:'Ransomware signature match', loc:'Dubai, AE'},
 ];
-
 const track = document.getElementById('ticker-track');
 const allEvents = [...tickerEvents, ...tickerEvents]; // double for seamless loop
 allEvents.forEach(ev => {
@@ -1478,7 +1589,6 @@ allEvents.forEach(ev => {
   span.innerHTML = `<span class="ti-type">[${ev.type}]</span>${ev.msg}<span class="ti-loc">▸ ${ev.loc}</span>`;
   track.appendChild(span);
 });
-
 /* ═══════════════════════════════════════
    TERMINAL ANIMATION
 ═══════════════════════════════════════ */
@@ -1496,7 +1606,6 @@ const termLines = [
   {out:' [2026-06-08 08:16] BLOCKED: XSS', class:'warn', delay:6000},
   {out:' [2026-06-08 08:17] System: OK', class:'ok', delay:6400},
 ];
-
 const termBody = document.getElementById('terminal-body');
 termLines.forEach(line => {
   setTimeout(() => {
@@ -1511,13 +1620,11 @@ termLines.forEach(line => {
     termBody.scrollTop = termBody.scrollHeight;
   }, line.delay);
 });
-
 setTimeout(() => {
   const cur = document.createElement('span');
   cur.className = 't-cursor';
   termBody.appendChild(cur);
 }, 7200);
-
 /* ═══════════════════════════════════════
    LIVE LOG ROTATION
 ═══════════════════════════════════════ */
@@ -1531,13 +1638,11 @@ const logMessages = [
   {cls:'ok', msg:'✓ SSL handshake — verified'},
   {cls:'critical', msg:'✕ BLOCKED: Malicious payload — quarantined'},
 ];
-
 setInterval(() => {
   const container = document.getElementById('log-container');
   if(!container) return;
   const entries = container.querySelectorAll('.log-entry');
   if(entries.length >= 6) entries[0].remove();
-
   const msg = logMessages[Math.floor(Math.random()*logMessages.length)];
   const now = new Date().toISOString().replace('T',' ').slice(0,19);
   const div = document.createElement('div');
@@ -1546,7 +1651,6 @@ setInterval(() => {
   div.style.animation = 'none';
   container.appendChild(div);
 }, 3500);
-
 /* ═══════════════════════════════════════
    CONTACT FORM
 ═══════════════════════════════════════ */
@@ -1557,22 +1661,18 @@ async function handleFormSubmit(e){
   const status = document.getElementById('form-status');
   btn.textContent = 'Sending...';
   btn.disabled = true;
-
   const data = Object.fromEntries(new FormData(form));
-
   // EmailJS integration — replace with your IDs
   // If not set up, falls back to mailto
   try {
     // Option 1: EmailJS (free) — uncomment and configure:
     // await emailjs.send('YOUR_SERVICE_ID','YOUR_TEMPLATE_ID', data, 'YOUR_PUBLIC_KEY');
-
     // Option 2: Formspree — replace YOUR_FORM_ID:
     const resp = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
       method:'POST',
       headers:{'Content-Type':'application/json', 'Accept':'application/json'},
       body: JSON.stringify(data)
     });
-
     if(resp.ok){
       status.className = 'form-status success';
       status.textContent = '✓ Message sent! We\'ll respond within 4 hours.';
@@ -1593,7 +1693,6 @@ async function handleFormSubmit(e){
     btn.disabled = false;
   }
 }
-
 /* ═══════════════════════════════════════
    SCROLL FADE IN
 ═══════════════════════════════════════ */
@@ -1601,7 +1700,6 @@ const obs = new IntersectionObserver(entries => {
   entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
 }, { threshold: 0.1 });
 document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
-
 /* ═══════════════════════════════════════
    MOBILE MENU
 ═══════════════════════════════════════ */
